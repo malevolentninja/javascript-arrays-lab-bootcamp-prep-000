@@ -1,42 +1,33 @@
-const chocolateBars = ['snickers', 'hundred grand', 'kitkat', 'skittles'];
+const kittens = ["Milo", "Otis", "Garfield"];
 
-
-function addElementToBeginningOfArray(array, element) {
-  return [element, ...array];
+function destructivelyAppendKitten(name) {
+  kittens.push(name);
 }
 
-function destructivelyAddElementToBeginningOfArray(array, element){
-  array.unshift(element);
-  return array;
+function destructivelyPrependKitten(name) {
+  kittens.unshift(name);
 }
 
-function addElementToEndOfArray(array, element) {
-  return [...array, element];
+function destructivelyRemoveLastKitten() {
+  kittens.pop();
 }
 
-function destructivelyAddElementToEndOfArray(array, element) {
-  array.push(element);
-  return array;
+function destructivelyRemoveFirstKitten() {
+  kittens.shift();
 }
 
-function accessElementInArray(array, index) {
-  return array[index];
+function appendKitten(name) {
+  return [...kittens, name];
 }
 
-function destructivelyRemoveElementFromBeginningOfArray(array) {
-  array.shift();
-  return array;
+function prependKitten(name) {
+  return [name, ...kittens];
 }
 
-function removeElementFromBeginningOfArray(array) {
-  return array.slice(1);
+function removeFirstKitten() {
+  return kittens.slice(1);
 }
 
-function destructivelyRemoveElementFromEndOfArray(array) {
-  array.pop();
-  return array;
-}
-
-function removeElementFromEndOfArray(array) {
-  return array.slice(0, array.length - 1);
+function removeLastKitten() {
+  return kittens.slice(0, kittens.length - 1);
 }
